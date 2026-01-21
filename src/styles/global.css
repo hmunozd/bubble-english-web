@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+:root {
+  --bg-sky: #eef2ff;
+  --bg-lavender: #f5f3ff;
+  
+  /* Pastel Palette from design */
+  --bubble-verb: #9be9ff;    /* Light Blue */
+  --bubble-grammar: #fefce8; /* Very Pale Yellow */
+  --bubble-grammar-border: #fef08a; /* Yellow Border */
+  --bubble-mistake: #fecaca; /* Pastel Red/Pink */
+  --bubble-phrase: #e9d5ff;  /* Light Purple */
+  --bubble-noun: #bbf7d0;    /* Mint Green */
+  
+  --ink-trail: rgba(100, 116, 139, 0.15);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-sky) 0%, var(--bg-lavender) 100%);
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  color: #475569; /* Slate 600 for general text */
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.bubble-base {
+  /* Soft shadow for depth without heavy borders */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bubble-verb { background-color: var(--bubble-verb); color: #0c4a6e; }
+.bubble-grammar { background-color: var(--bubble-grammar); border: 2px solid var(--bubble-grammar-border); color: #422006; }
+.bubble-mistake { background-color: var(--bubble-mistake); color: #7f1d1d; }
+.bubble-phrase { background-color: var(--bubble-phrase); color: #581c87; }
+.bubble-noun { background-color: var(--bubble-noun); color: #064e3b; }

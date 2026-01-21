@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bubble-english.jildo.me/sitemap-0.xml
